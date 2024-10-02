@@ -33,4 +33,55 @@ test-case-generation/
 ├── package.json              # Arquivo de configuração do projeto Node.js
 └── README.md                 # Documentação do projeto
 
+```
+
+## Como Utilizar
+
+## 1. Clonar o Repositório
+Clone o repositório localmente com o comando:
+
+```
+git clone https://github.com/sousafael/test-case-generation.git
+cd test-case-generation
+
+```
+
+## 2. Instalar Dependências
+Instale as dependências do projeto:
+```
+npm install
+```
+
+## 3. Configurar a Chave da API
+Crie um arquivo .env na raiz do projeto e adicione a sua chave da API do Hugging Face:
+```
+HUGGINGFACE_API_KEY=your-hugging-face-api-key
+```
+Substitua your-hugging-face-api-key pela chave real da API.
+
+## 4. Gerar Casos de Teste
+Execute o script para gerar casos de teste a partir de uma história de usuário:
+```
+node src/generateTests.js
+```
+Este comando vai chamar a API do Hugging Face e gerar casos de teste com base na história fornecida.
+
+## 5. Executar Testes com Cypress
+Para rodar os testes com Cypress, execute:
+```
+npx cypress open
+```
+Isso abrirá a interface do Cypress, onde você poderá visualizar e executar os testes. Selecione o arquivo logon.spec.js para rodar os testes de login.
+
+Exemplos de casos de teste que podem ser gerados:
+
+- Login com credenciais corretas: Verifica se o login ocorre com sucesso ao fornecer um nome de usuário e senha válidos.
+- Login com senha incorreta: Testa se a aplicação exibe a mensagem de erro apropriada ao fornecer uma senha incorreta.
+- Campos obrigatórios vazios: Valida que a aplicação impede o login se os campos obrigatórios, como nome de usuário ou senha, estiverem vazios.
+
+## Contribuições
+Contribuições são bem-vindas! Para sugerir melhorias, abra um pull request ou crie uma issue no repositório.
+   
+
+
 
